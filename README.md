@@ -157,7 +157,7 @@ other parts of the system (e.g. the user-interface) and to easier search on data
 More information on this topic can be found here:
 
 In this demo, the Client data (_com.redhat.bpms.demo.fsi.onboarding.model.Client_) is stored in its own table in the database. This is accomplished by annotating
-the domain model with JPA (Java Persistence API) annotations (see: http://www.github.com/entando/fis-onboarding-bpm/commercial-client-onboarding/src/main/java/com/redhat/bpms/demo/fsi/onboarding/model/Client.java)).
+the domain model with JPA (Java Persistence API) annotations (see: https://github.com/entando/fsi-onboarding-bpm/blob/master/commercial-client-onboarding/src/main/java/com/redhat/bpms/demo/fsi/onboarding/model/Client.java)).
 
 Second, we've configured the jBPM JPAPlaceholderResolverStrategy as a custom marshalling strategy on our KJAR (as can be seen [here](https://github.com/entando/fsi-onboarding-bpm/blob/master/commercial-client-onboarding/src/main/resources/META-INF/kie-deployment-descriptor.xml#L9)), which ensures that all JPA-annotated process variables are marshalled using JPA into the table configured on the model, rather than stored in a BLOB. In the case of our _Client_ process variable, this means that the process variables is stored in the _client_ table in the database.
 
